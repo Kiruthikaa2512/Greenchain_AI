@@ -1,269 +1,280 @@
-#  **GreenChain AI**
+# **GreenChain AI — Sustainable Supply Chain Intelligence**
 
-### *Sustainable Supply Chain Intelligence for a Greener World*
+**Live App:** [https://greenchainai.streamlit.app](https://greenchainai.streamlit.app)
+**Repository:** [https://github.com/Kiruthikaa2512/Greenchain_AI](https://github.com/Kiruthikaa2512/Greenchain_AI)
 
-## *Built for Aethra Global Vibeathon 2025* ##
-
----
-
-## **Overview**
-
-Supply chains power the world — but they also generate **over 60% of global emissions**, according to McKinsey.
-While large enterprises invest millions into sustainability analytics, **most teams still rely on spreadsheets**, manual estimates, and fragmented tools.
-
-**GreenChain AI** changes that.
-
-This project is a unified, intelligent sustainability assistant that turns **transportation routes**, **demand patterns**, **supplier ESG maturity**, and **warehouse energy usage** into a single, interpretable **Sustainability Index (0–100)**.
-
-It gives organizations — even small ones — the analytics superpowers normally reserved for Fortune 500 logistics teams.
+GreenChain AI is a unified sustainability intelligence platform designed to evaluate the environmental impact of end-to-end supply chain operations in real time. It converts route emissions, demand planning accuracy, supplier ESG maturity, and warehouse energy usage into a single, interpretable sustainability index (0–100).
+The goal: **help businesses make greener, smarter, and more responsible supply-chain decisions.**
 
 ---
 
-# **Why We Built This (The Problem)**
+## **1. Overview**
 
-Today, the supply chain sustainability landscape is fragmented:
+Global supply chains are responsible for over 60% of worldwide emissions. Organizations lack accessible, decision-ready tools that make sustainability *measurable*, *actionable*, and *transparent*.
 
-### ❌ Routing tools calculate distance — not emissions
+GreenChain AI solves this problem by providing:
 
-### ❌ Forecasting tools predict demand — not waste
+* Real-time routing emissions estimates
+* Demand forecasting with overstock/waste impact
+* Supplier sustainability benchmarking
+* Warehouse energy efficiency modeling
+* A consolidated Sustainability Index
 
-### ❌ Supplier scorecards measure performance — not ESG transparency
-
-### ❌ Warehouse dashboards show operations — not sustainability impact
-
-Organizations are forced to stitch together multiple tools and manually guess sustainability metrics.
-This leads to:
-
-* Inefficient route planning
-* Unnecessary emissions
-* Overstock & waste
-* Poor supplier environmental accountability
-* Energy-inefficient warehouse operations
-* Lack of a *unified sustainability score*
-
-Meanwhile, governments and corporations are pushing towards **net-zero commitments**, yet small and mid-sized businesses have no accessible tools to participate.
+The platform is designed to be understandable even to users without technical supply chain knowledge.
 
 ---
 
-# **What GreenChain AI Does (The Solution)**
+## **2. Features**
 
-GreenChain AI integrates **4 critical pillars of sustainable logistics** into a single platform:
+### **A. Overall Sustainability Dashboard**
 
----
+Centralized score combining the four core pillars:
 
-## 1️ **Transportation & Routing Intelligence**
+* Transport Sustainability Score
+* Waste & Forecasting Score
+* Supplier Sustainability Score
+* Warehouse Sustainability Score
 
-✔ Route optimization (nearest-neighbor heuristic)
-✔ Emissions modeling by vehicle type (diesel, gas, hybrid, EV)
-✔ Load factor impact
-✔ CSV upload + interactive dashboards
-✔ Transport Sustainability Score
-
----
-
-## 2️ **Demand Forecasting & Waste Reduction**
-
-✔ Linear regression forecasting
-✔ Safety stock simulation
-✔ Overstock waste estimation
-✔ CSV upload for real historical demand
-✔ Waste & Forecasting Score
+Includes a **radar chart** to visually understand strengths and weaknesses across supply chain operations.
 
 ---
 
-## 3️ **Supplier Sustainability Evaluation**
+### **B. Transportation & Routing**
 
-✔ ESG-aware supplier scoring
-✔ Weighted evaluation (delivery, ESG, quality, transparency)
-✔ Upload your own supplier data
-✔ Radar ESG visualization
-✔ Supplier Sustainability Score
+Model the environmental impact of last-mile delivery.
 
----
+**Capabilities:**
 
-## 4️ **Warehouse Energy & Operations**
+* Upload real route data via CSV
+* Or auto-generate synthetic routes
+* Vehicle comparison (Diesel, Gasoline, Hybrid, Electric)
+* Load-factor sensitivity
+* Emissions vs. baseline diesel
+* Automatic route optimization using nearest-neighbor heuristics
 
-✔ Energy consumption estimation
-✔ Refrigerated storage modeling
-✔ Forklift electrification impact
-✔ Current vs optimized scenarios
-✔ Warehouse Sustainability Score
-
----
-
-#  **Unified Sustainability Index (0–100)**
-
-The platform aggregates all modules into a single **Sustainability Index**, helping organizations:
-
-* Benchmark operations
-* Report sustainability performance
-* Prioritize areas of improvement
-* Share sustainability proof in audits or grants
-* Add evidence in submissions (like this hackathon!)
-
----
-
-#  **Why This Matters**
-
-GreenChain AI democratizes sustainability intelligence:
-
-### **Accessible**
-
-Runs in a browser. No enterprise software required.
-
-### **Actionable**
-
-Shows exactly *where* emissions and waste originate.
-
-### **Transparent**
-
-Gives organizations control over their sustainability decisions.
-
-### **High-Impact**
-
-Addresses climate, logistics optimization, energy efficiency, and ESG transparency at once.
-
-What previously required four independent enterprise systems now fits inside one cohesive application — simplifying sustainability for millions of businesses.
-
----
-
-# **How the App Works**
-
-### **1. Upload CSV or Use Sample Data**
-
-Each module allows CSV uploads with downloadable templates:
-
-* Route data
-* Demand history
-* Supplier ratings
-* Warehouse configuration
-
-### **2. View Analytics & Scores**
-
-Each module shows:
-
-* Metrics
-* Charts
-* Optimizations
-* Sustainability scores
-
-### **3. Download Reports**
-
-A complete sustainability report is generated as:
-
-* PDF
-* Plain text (for Devpost submission)
-
----
-
-# Technology Stack
-
-| Component          | Used For                   |
-| ------------------ | -------------------------- |
-| **Python**         | Core logic                 |
-| **Streamlit**      | UI & application framework |
-| **Pandas / NumPy** | Data processing            |
-| **Plotly**         | Visualizations             |
-| **scikit-learn**   | Linear regression          |
-| **ReportLab**      | PDF generation             |
-| **CSS**            | Custom UI theme            |
-
----
-
-# Installation
+**CSV Template Columns:**
 
 ```
+location, latitude, longitude, drop_kg
+```
+
+---
+
+### **C. Demand & Waste Forecasting**
+
+Evaluate inventory waste based on forecasting and planning decisions.
+
+**Capabilities:**
+
+* Upload demand history or generate synthetic data
+* Automatic linear regression forecast
+* Adjustable safety stock factor
+* Overproduction/waste estimation
+* Waste Sustainability Score (0–100)
+
+**CSV Template Columns:**
+
+```
+date, demand
+```
+
+---
+
+### **D. Supplier Sustainability**
+
+Quantify supplier performance using weighted ESG dimensions.
+
+**Capabilities:**
+
+* Upload supplier data via CSV
+* Weighted scoring across:
+
+  * On-time Delivery
+  * ESG Score
+  * Quality Score
+  * Emission Transparency
+* Radar chart view for any selected supplier
+* Computes weighted Supplier Sustainability Score
+
+**CSV Template Columns:**
+
+```
+supplier, on_time_delivery, esg_score, quality_score, emission_transparency
+```
+
+---
+
+### **E. Warehouse Energy & Operations**
+
+Model energy consumption and identify optimization opportunities.
+
+**Capabilities:**
+
+* Upload warehouse parameters
+* Model refrigeration impact
+* Forklift count impact
+* Operating hours modeling
+* Optimized scenario comparison
+* Warehouse Sustainability Score
+
+**CSV Template Columns:**
+
+```
+area_m2, operating_hours, refrigerated_pct, forklifts
+```
+
+---
+
+### **F. PDF & Text Sustainability Report**
+
+Automatic downloadable sustainability summary including:
+
+* All scores
+* Overall sustainability index
+* Module-wise results
+
+---
+
+## **3. Tech Stack**
+
+### **Framework**
+
+* **Streamlit** — lightweight, fast UI for data applications
+
+### **Languages**
+
+* Python 3.9+
+
+### **Core Libraries**
+
+* **Pandas, NumPy** — Data processing
+* **Plotly** — Interactive charts
+* **scikit-learn** — Forecasting
+* **NetworkX** — Routing logic
+* **ReportLab** — PDF generation
+
+### **Deployment**
+
+* **Streamlit Cloud** — Direct GitHub integration
+
+---
+
+## **4. Why This Matters**
+
+Most sustainability tools in supply chain analytics are:
+
+* Expensive
+* Over-engineered
+* Not accessible to small businesses
+* Not actionable for day-to-day decisions
+
+GreenChain AI delivers:
+
+* Transparency
+* Actionability
+* Interpretability for non-technical users
+* Immediate value with simple inputs
+* A unified sustainability measurement framework
+
+This democratizes sustainability analytics for both small and large organizations.
+
+---
+
+## **5. Installation & Local Execution**
+
+### **Clone the repository**
+
+```bash
+git clone https://github.com/Kiruthikaa2512/Greenchain_AI.git
+cd Greenchain_AI
+```
+
+### **Create Virtual Environment**
+
+```bash
+python -m venv venv
+source venv/bin/activate      # macOS/Linux
+venv\Scripts\activate         # Windows
+```
+
+### **Install Dependencies**
+
+```bash
 pip install -r requirements.txt
+```
+
+### **Run the App**
+
+```bash
 streamlit run app.py
 ```
 
 ---
 
-# requirements.txt
+## **6. CSV Templates**
+
+Templates are included to help users understand expected formats.
+
+**Route Template:** `templates/route_template.csv`
+**Demand Template:** `templates/demand_template.csv`
+**Supplier Template:** `templates/supplier_template.csv`
+**Warehouse Template:** `templates/warehouse_template.csv`
+
+(All available for download inside the app too.)
+
+---
+
+## **7. Architecture**
 
 ```
-streamlit
-pandas
-numpy
-plotly
-scikit-learn
-reportlab
-networkx
+├── app.py
+├── requirements.txt
+├── templates/
+│   ├── route_template.csv
+│   ├── demand_template.csv
+│   ├── supplier_template.csv
+│   └── warehouse_template.csv
+├── screenshots/
+│   ├── overview.png
+│   ├── routing.png
+│   ├── forecasting.png
+│   ├── supplier.png
+│   └── warehouse.png
+└── README.md
 ```
 
 ---
 
-# CSV Template Formats
+## **8. What Was Hard**
 
-### **1️ Route Template (route_template.csv)**
-
-```
-location,latitude,longitude,drop_kg
-Stop 1,12.90,77.50,10
-Stop 2,12.95,77.60,15
-Stop 3,12.88,77.72,8
-```
-
-### **2️ Demand Template (demand_template.csv)**
-
-```
-date,demand
-2024-01-01,200
-2024-01-02,220
-2024-01-03,210
-```
-
-### **3️ Supplier Template (supplier_template.csv)**
-
-```
-supplier,on_time_delivery,esg_score,quality_score,emission_transparency
-Supplier A,0.96,0.82,0.9,0.85
-Supplier B,0.88,0.78,0.86,0.65
-```
-
-### **4️ Warehouse Template (warehouse_template.csv)**
-
-```
-area_m2,operating_hours,refrigerated_pct,forklifts
-8000,16,30,10
-```
+* Building a unified scoring model that feels intuitive
+* Ensuring CSV uploads gracefully handle errors
+* Balancing realism vs. simplicity for hackathon constraints
+* Designing UI/UX that works for non-technical users
+* Managing multiple modules without overwhelming the interface
 
 ---
 
-# Key Innovations
+## **9. What Surprised Me**
 
-###  Unified multi-dimensional sustainability scoring
-
-No other open-source tool merges transport, demand, suppliers, and warehouse energy.
-
-###  CSV-first design
-
-Real organizations can plug in their raw data instantly.
-
-### Completely local & privacy-safe
-
-Everything runs in your browser — zero cloud dependencies.
-
-### Hackathon-ready evidence generation
-
-Built-in PDF and summary exports to strengthen your submission.
+* How well simple forecasting models work for waste prediction
+* How emissions change drastically based on small routing decisions
+* How accessible sustainability becomes when visualized properly
 
 ---
 
-# Final Thoughts
+## **10. Future Roadmap**
 
-GreenChain AI is built with one purpose:
+* AI-powered route optimization
+* Real-time CO₂ emission APIs
+* Multi-warehouse planning
+* Blockchain-based supplier audit traceability
+* Enterprise integration (ERP/SRM systems)
+* Custom scoring weights per industry
 
-## **Make sustainability measurable, actionable, and accessible for everyone.**
+---
 
-Whether you're a small business or a global enterprise, sustainability shouldn’t require enterprise software or million-dollar platforms.
+## **11. License**
 
-GreenChain AI proves that powerful sustainability intelligence can be:
-
-* simple
-* intuitive
-* transparent
-* open
-* and impactful
-
+MIT License.
 
