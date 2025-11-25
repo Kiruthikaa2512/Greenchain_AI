@@ -2,7 +2,7 @@
 
 ### *Sustainable Supply Chain Intelligence for a Greener World*
 
-*Built for Aethra Global Vibeathon 2025*
+## *Built for Aethra Global Vibeathon 2025* ##
 
 ---
 
