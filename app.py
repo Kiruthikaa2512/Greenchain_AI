@@ -1230,7 +1230,7 @@ elif section == "Download Report":
         f"""
         <div class="gc-card">
             <div class="gc-pill">Export Evidence</div>
-            <h2 style="margin-top:0.5rem;">📊 Download Sustainability Report</h2>
+            <h2 style="margin-top:0.5rem;">Download Sustainability Report</h2>
             <p style="font-size:0.9rem; opacity:0.9;">
                 Current <b>Overall Sustainability Index</b>: <b>{overall} / 100</b><br/>
                 Export a one-click summary to attach to your hackathon submission or evidence bundle.
